@@ -33,13 +33,13 @@ router.post('/', [
     if (!errors.isEmpty()) {
         return res.status(400).json({errors: errors.array() }); // Sends 400
     }
-    const { name, email, password } = req.body;
+    const { email, password } = req.body;
 
     try {
         // See if user exists
         let user = await User.findOne({ email: email });
 
-        if (!user) { // If user already exists
+        if (!user) { // If user does not exists
             return res.status(400).json({ errors: [ { msg: 'Invalid credentials' } ] });
         }
 
@@ -49,7 +49,8 @@ router.post('/', [
         if (!isMatch) {
             return res.status(400).json({ errors: [ { msg: 'Invalid credentials' } ] });
         }
-
+        
+        // JWT
         const payload = { // Create our payload
             user: {
                 id: user.id // Don't need to do _id

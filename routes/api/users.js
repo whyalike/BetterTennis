@@ -50,6 +50,7 @@ router.post('/', [
 
         await user.save(); // Save user to db, this gives us a promise
 
+        // JWT
         const payload = { // Create our payload
             user: {
                 id: user.id // Don't need to do _id

@@ -5,6 +5,7 @@ const { check, validationResult } = require('express-validator');
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const config = require('config');
 const User = require('../../models/User'); // Get User model 
 
 // @route   POST api/users
@@ -47,16 +48,26 @@ router.post('/', [
         // Anything that returns a promise needs to use await
         user.password = await bcrypt.hash(password, salt); // Creates hash and assigns to var
 
-        await user.save(); // Save user to db
+        await user.save(); // Save user to db, this gives us a promise
 
-        // Return jsonwebtoken
-        res.send('User registered')
+        const payload = { // Create our payload
+            user: {
+                id: user.id // Don't need to do _id
+            }
+        }
+
+        jwt.sign( // Create our JWT for the user
+            payload, 
+            config.get("jwtSecret"), // It needs to have some secret
+            { expiresIn: 360000 },
+            (err, token) => {
+                if (err) throw err;
+                res.json({ token }); // 200 response
+            });
+
     } catch (err) {
         console.error(err.message);
         res.status(500).send('Server error');
-    }
-
-    
-});
+    }});
 
 module.exports = router;

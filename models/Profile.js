@@ -5,9 +5,6 @@ const ProfileSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'user'
     },
-    company: {
-        type: String
-      },
       website: {
         type: String
       },
@@ -23,9 +20,6 @@ const ProfileSchema = new mongoose.Schema({
         required: true
       },
       bio: {
-        type: String
-      },
-      githubusername: {
         type: String
       },
       experience: [
@@ -95,9 +89,6 @@ const ProfileSchema = new mongoose.Schema({
           type: String
         },
         facebook: {
-          type: String
-        },
-        linkedin: {
           type: String
         },
         instagram: {

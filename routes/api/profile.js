@@ -56,10 +56,10 @@ async( req,res ) => {
     // Build profile object
     const profileFields = {};
     profileFields.user = req.user.id;
-    if (website) profileFields.user = website;
-    if (location) profileFields.user = location;
-    if (bio) profileFields.user = bio;
-    if (status) profileFields.user = status;
+    if (website) profileFields.website = website;
+    if (location) profileFields.location = location;
+    if (bio) profileFields.bio = bio;
+    if (status) profileFields.status = status;
     if (skills) {
         profileFields.skills = skills.split(',').map(skill => skill.trim());
     }
@@ -67,9 +67,9 @@ async( req,res ) => {
     // Build social object
     profileFields.social = {}
     if (youtube) profileFields.social.youtube = youtube;
-    if (twitter) profileFields.social.youtube = twitter;
-    if (facebook) profileFields.social.youtube = facebook;
-    if (instagram) profileFields.social.youtube = instagram;
+    if (twitter) profileFields.social.twitter = twitter;
+    if (facebook) profileFields.social.facebook = facebook;
+    if (instagram) profileFields.social.instagram = instagram;
 
     try {
         let profile = await Profile.findOne( { user: req.user.id });
@@ -87,7 +87,6 @@ async( req,res ) => {
 
         // Create
         profile = new Profile(profileFields);
-
         await profile.save();
         res.json(profile);
 

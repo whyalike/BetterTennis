@@ -24,11 +24,11 @@ const ProfileSchema = new mongoose.Schema({
       },
       experience: [
         {
-          title: {
+          place: {
             type: String,
             required: true
           },
-          company: {
+          name: {
             type: String,
             required: true
           },

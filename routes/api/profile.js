@@ -234,19 +234,19 @@ router.put('/education', [auth, [
     }
 
     const {
-        place,
-        name,
-        location,
+        school,      
+        degree,       
+        fieldofstudy,
         from,
         to,
         current,
         description
     } = req.body;
 
-    const newExp = {
-        place,      // place : place
-        name,       // name : name
-        location,
+    const newEdu = {
+        school,      
+        degree,       
+        fieldofstudy,
         from,
         to,
         current,
@@ -256,7 +256,7 @@ router.put('/education', [auth, [
     try {
         const profile = await Profile.findOne( {user: req.user.id} );
 
-        profile.experience.unshift(newExp) // experience is an array, push from the front
+        profile.education.unshift(newEdu) // experience is an array, push from the front
 
         await profile.save();
 
@@ -268,17 +268,17 @@ router.put('/education', [auth, [
     }
 });
 
-// @route   DELETE api/profile/experience/:exp_id
-// @desc    Delete experience from profile
+// @route   DELETE api/profile/education/:exp_id
+// @desc    Delete education from profile
 // @access  Private
-router.delete("/experience/:exp_id", auth, async (req, res) => {
+router.delete("/education/:edu_id", auth, async (req, res) => {
     try {
         const profile = await Profile.findOne( {user: req.user.id} );
         
         // Get remove index
-        const removeIndex = profile.experience.map(item => item.id).indexOf(req.params.exp_id);
-        console.log(profile.experience)
-        profile.experience.splice(removeIndex, 1);
+        const removeIndex = profile.education.map(item => item.id).indexOf(req.params.edu_id);
+        console.log(profile.education)
+        profile.education.splice(removeIndex, 1);
 
         await profile.save();
 

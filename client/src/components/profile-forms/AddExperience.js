@@ -40,7 +40,7 @@ const AddExperience = ({addExperience, history}) => {
         <div class='form-group'>
           <input
             type='text'
-            placeholder='* Place'
+            placeholder='* Rank'
             name='place'
             required
             value={place}
@@ -88,7 +88,7 @@ const AddExperience = ({addExperience, history}) => {
                 toggleDisabled(!toDateDisabled); // Toggle toDateDisabled
               }}
             />{' '}
-            Current Job
+            Currently Playing
           </p>
         </div>
         <div class='form-group'>

@@ -1,4 +1,14 @@
 # BetterTennis
 Social network for tennis players
 
-I've created notes across this great [course](https://www.udemy.com/course/mern-stack-front-to-back/) under the pdf [here](./react_notes.pdf)
+This application was created following the step-by-step [course](https://www.udemy.com/course/mern-stack-front-to-back/) by Brad Traversy. BetterTennis is an adapted version of the application taught in this course.
+
+Though I had experience with MERN stack before, I thought taking this course would allow me to enhance my skills and knowledge with these popular technologies. The course was informative and highly practical. I did my best to further research on certain aspects that I was unclear of, using other resources. Setting up authentication and understanding how Redux interacts with React were some of the harder topics, but it helped me as a I made notes. The most satisfying part of this course was being able to wrap your head around these difficult concepts. 
+
+My notes can be found [here](./react_notes.pdf). 
+
+<br/>
+
+*Original Udemy Course:* https://www.udemy.com/course/mern-stack-front-to-back/
+
+*Developer 2.0 GitHub:* https://github.com/bradtraversy/devconnector_2.0

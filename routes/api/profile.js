@@ -148,12 +148,9 @@ router.delete('/', auth, async (req, res) => {
     await Post.deleteMany({user: req.user.id});
 
     // Remove profile
-    console.log('Bruh 0');
     await Profile.findOneAndRemove({user: req.user.id});
-    console.log('Bruh 1');
     // Removes user
     await User.findOneAndRemove({_id: req.user.id});
-    console.log('Bruh 2');
     res.json({msg: 'User has been deleted'});
   } catch (err) {
     console.error(err.message);

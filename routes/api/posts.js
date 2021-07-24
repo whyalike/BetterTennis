@@ -108,18 +108,19 @@ router.delete('/:id', auth, async (req, res) => {
 // @access  Private
 router.put('/like/:id', auth, async (req, res) => {
   try {
+    console.log('f');
     const post = await Post.findById(req.params.id);
-
+    console.log('before', post);
     // Check if the post has already been liked
     if (
       post.likes.filter((like) => like.user.toString() === req.user.id).length >
       0
     ) {
+      console.log('already been liked');
       return res.status(400).json({msg: 'Post has already been liked'});
     }
-
     post.likes.unshift({user: req.user.id}); // Puts in the beginning
-
+    console.log('after', post);
     await post.save();
 
     res.json(post.likes);
@@ -130,12 +131,12 @@ router.put('/like/:id', auth, async (req, res) => {
 });
 
 // @route   PUT api/posts/unlike/:id
-// @desc    Like a post
+// @desc    Unlike a post
 // @access  Private
 router.put('/unlike/:id', auth, async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
-
+    console.log('before unlike', post);
     // Check if the post has already been liked
     if (
       post.likes.filter((like) => like.user.toString() === req.user.id)
@@ -150,7 +151,7 @@ router.put('/unlike/:id', auth, async (req, res) => {
       .indexOf(req.user.id);
 
     post.likes.splice(removeIndex, 1);
-
+    console.log('after unlike', post);
     await post.save();
 
     res.json(post.likes);

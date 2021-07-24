@@ -16,10 +16,10 @@ const Profiles = ({getProfiles, profile: {profiles, loading}}) => {
         <Spinner />
       ) : (
         <Fragment>
-          <h1 className='large text-primary'>Tennis Players</h1>
+          <h1 className='large text-primary'>Tennis Athletes</h1>
           <p className='lead'>
             <i className='fab fa-connectdevelop'></i>Browse and connect with
-            tennis players
+            other athletes
           </p>
           <div className='profiles'>
             {' '}

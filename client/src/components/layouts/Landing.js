@@ -18,7 +18,7 @@ const Landing = ({isAuthenticated}) => {
       <div className='dark-overlay'>
         <div class='container' className='landing-inner' id='intro'>
           <div class='box'>
-            <h1 className='x-large'>BetterTennis</h1>
+            <h1 className='x-large text-center'>BetterTennis</h1>
             <p className='lead'>Better tennis begins here.</p>
             <div class='sphere'>
               <i_s></i_s>

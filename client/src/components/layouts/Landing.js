@@ -20,6 +20,13 @@ const Landing = ({isAuthenticated}) => {
           <div class='box'>
             <h1 className='x-large text-center'>BetterTennis</h1>
             <p className='lead'>Better tennis begins here.</p>
+            <a
+              href='https://github.com/whyalike/BetterTennis'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <i class='fab fa-3x fa-github'></i>
+            </a>
             <div class='sphere'>
               <i_s></i_s>
               <i_s></i_s>

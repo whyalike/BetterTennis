@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {addPost} from '../../actions/post';
 
+var Filter = require('bad-words'),
+  filter = new Filter();
+
 const PostForm = ({addPost}) => {
   const [text, setText] = useState('');
 
@@ -28,7 +31,12 @@ const PostForm = ({addPost}) => {
           onChange={(e) => setText(e.target.value)}
           required
         ></textarea>
-        <input type='submit' class='btn btn-dark my-1' value='Submit' />
+        <input
+          type='submit'
+          class='btn btn-dark my-1'
+          value='Submit'
+          onClick={(e) => setText(filter.clean(text))}
+        />
       </form>
     </div>
   );

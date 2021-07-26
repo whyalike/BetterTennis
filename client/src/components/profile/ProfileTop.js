@@ -16,8 +16,8 @@ const ProfileTop = ({
     <div className='profile-top bg-primary p-2'>
       <img className='round-img my-1' src={avatar} alt='' />
       <h1 className='large'>{name}</h1>
-      <p className='lead'>{status}</p>
-      <p>{location && <span>{location}</span>}</p>
+      <p className='lead font-white'>{status}</p>
+      <p className='font-white'>{location && <span>{location}</span>}</p>
       <div className='icons my-1'>
         {website && (
           <a href={website} target='_blank' rel='noopener noreferrer'>

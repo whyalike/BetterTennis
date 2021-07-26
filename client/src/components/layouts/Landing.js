@@ -4,7 +4,36 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import '../css/styles.css';
 
+import {useState, useEffect} from 'react';
+
+function getWindowDimensions() {
+  const {innerWidth: width, innerHeight: height} = window;
+  return {
+    width,
+    height,
+  };
+}
+
+const useWindowDimensions = () => {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+};
+
 const Landing = ({isAuthenticated}) => {
+  const {height, width} = useWindowDimensions();
+
   if (isAuthenticated) {
     return <Redirect to='/dashboard' />;
   }
@@ -27,7 +56,7 @@ const Landing = ({isAuthenticated}) => {
             >
               <i class='fab fa-3x fa-github'></i>
             </a>
-            <div class='sphere'>
+            <div class={width < 385 ? 'sphere' : 'sphere'}>
               <i_s></i_s>
               <i_s></i_s>
               <i_s></i_s>

@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-  --primary-color: #17a2b8;
+  --primary-color: #3aacf8;
   --dark-color: #343a40;
   --light-color: #f4f4f431;
   --danger-color: #dc3545;
@@ -60,6 +60,10 @@ img {
 .lead {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.font-white {
+  color: white;
 }
 
 .text-center {
@@ -349,6 +353,9 @@ x .form .social-input {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin: 0;
+  overflow: hidden;
+  background: black radial-gradient(#223d66, #000000);
 }
 
 /* Profiles Page */

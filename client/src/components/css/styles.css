@@ -195,12 +195,12 @@ p {
 }
 
 /*--------------------------------------------*/
-html,
+/* html,
 body {
   margin: 0;
   overflow: hidden;
   background: black radial-gradient(#223d66, #000000);
-}
+} */
 
 .sphere {
   animation: rot 16s linear infinite reverse;

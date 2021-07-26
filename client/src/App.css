@@ -295,6 +295,10 @@ x .form .social-input {
   color: white;
 }
 
+.table {
+  margin: auto;
+}
+
 .table th,
 .table td {
   padding: 1rem;

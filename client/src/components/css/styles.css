@@ -193,6 +193,16 @@ body {
   background: black radial-gradient(#223d66, #000000);
 } */
 
+.mobile-sphere {
+  animation: rot 18s linear infinite reverse;
+  width: 100%;
+  height: 3px;
+  margin: auto;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+}
+
 .sphere {
   animation: rot 16s linear infinite reverse;
   width: 100%;
@@ -205,14 +215,22 @@ body {
 
 i_s {
   position: absolute;
-  width: 333px;
-  height: 333px;
   line-height: 333px;
   transform-style: preserve-3d;
-  border-radius: 50%;
+  border-radius: 70%;
   backface-visibility: visible;
   box-shadow: 0 0 83.25px 0 rgba(255, 255, 255, 0.1),
     inset 0 0 83.25px 0 rgba(255, 255, 255, 0.2);
+}
+
+.display-sphere {
+  width: 333px;
+  height: 333px;
+}
+
+.display-mobile-sphere {
+  width: 210px;
+  height: 210px;
 }
 
 i_s:nth-child(1) {

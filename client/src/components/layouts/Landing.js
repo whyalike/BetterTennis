@@ -56,40 +56,106 @@ const Landing = ({isAuthenticated}) => {
             >
               <i class='fab fa-3x fa-github'></i>
             </a>
-            <div class={width < 385 ? 'sphere' : 'sphere'}>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
-              <i_s></i_s>
+            <div class={width < 385 ? 'mobile-sphere' : 'sphere'}>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
+              <i_s
+                class={width < 385 ? 'display-mobile-sphere' : 'display-sphere'}
+              ></i_s>
             </div>
           </div>
         </div>

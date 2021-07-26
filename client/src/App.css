@@ -339,8 +339,7 @@ x .form .social-input {
 
 /* Landing Page */
 .landing {
-  position: relative;
-  height: 100vh;
+  height: 100%;
 }
 
 .landing-inner {

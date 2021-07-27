@@ -7,7 +7,9 @@ Though I had experience with MERN stack before, I thought taking this course wou
 
 My notes can be found [here](./react_notes.pdf). 
 
-<br/>
+## Acknowledgements
+
+*Code for shiny sphere:* https://codepen.io/secretgspot/pen/yDcja
 
 *Original Udemy Course:* https://www.udemy.com/course/mern-stack-front-to-back/
 

@@ -177,7 +177,7 @@ router.put(
       return res.status(400).json({errors: errors.array()});
     }
 
-    const {place, name, location, from, to, current, description} = req.body;
+    const {place, name, location, from, to, current, details} = req.body;
 
     const newExp = {
       place, // place : place
@@ -186,7 +186,7 @@ router.put(
       from,
       to,
       current,
-      description,
+      details,
     };
 
     try {
@@ -248,8 +248,7 @@ router.put(
       return res.status(400).json({errors: errors.array()});
     }
 
-    const {school, degree, fieldofstudy, from, to, current, description} =
-      req.body;
+    const {school, degree, fieldofstudy, from, to, current, details} = req.body;
 
     const newEdu = {
       school,
@@ -258,7 +257,7 @@ router.put(
       from,
       to,
       current,
-      description,
+      details,
     };
 
     try {

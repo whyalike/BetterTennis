@@ -87,7 +87,7 @@ const AddEducation = ({addEducation, history}) => {
                 toggleDisabled(!toDateDisabled); // Toggle toDateDisabled
               }}
             />{' '}
-            Current Job
+            Currently Studying
           </p>
         </div>
         <div class='form-group'>
@@ -105,7 +105,7 @@ const AddEducation = ({addEducation, history}) => {
             name='details'
             cols='30'
             rows='5'
-            placeholder='Competition Details'
+            placeholder='Additional Details'
             value={details}
             onChange={(e) => onChange(e)}
           ></textarea>

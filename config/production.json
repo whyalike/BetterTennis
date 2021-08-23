@@ -1,0 +1,4 @@
+{
+  "mongoURI":"mongodb+srv://alika-better:johnmayer@bettertennis.2jne2.mongodb.net/",
+  "jwtSecret":"mysecrettoken"
+}

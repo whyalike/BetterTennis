@@ -9,6 +9,8 @@ My notes can be found [here](./react_notes.pdf).
 
 ## Acknowledgements
 
+*Certificate:* https://www.udemy.com/certificate/UC-7cd24473-b952-4cf1-8f58-e8db0a3ec062/
+
 *Code for shiny sphere:* https://codepen.io/secretgspot/pen/yDcja
 
 *Original Udemy Course:* https://www.udemy.com/course/mern-stack-front-to-back/
